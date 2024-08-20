@@ -21,12 +21,12 @@ public class ScientificController {
    private final ScientificCalculatorService _scientificCalculator;
 
    public ScientificController( ScientificCalculatorService scientificCalculator) {
-      _scientificCalculator = scientificCalculator;
+      //_scientificCalculator = scientificCalculator;
    }
 
    @GetMapping("/square/{factor}")
    public ApiResult square(@PathVariable BigDecimal factor ) {
-      return getResult(factor.multiply(factor));
+      return getResult(factor));
    }
 
    @GetMapping("/factorial/{number}")
