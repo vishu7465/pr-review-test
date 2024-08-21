@@ -21,7 +21,7 @@ public class ScientificController {
    private final ScientificCalculatorService _scientificCalculator;
 
    public ScientificController( ScientificCalculatorService scientificCalculator) {
-      //_scientificCalculator = scientificCalculator;
+      _scientificCalculator = scientificCalculator;
    }
 
    @GetMapping("/square/{factor}")
