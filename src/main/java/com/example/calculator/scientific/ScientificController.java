@@ -26,14 +26,14 @@ public class ScientificController {
 
    @GetMapping("/square/{factor}")
    public ApiResult square(@PathVariable BigDecimal factor ) {
-      return getResult(factor.multiply(factor));
+      return getResult(factor);
    }
 
    @GetMapping("/factorial/{number}")
    public ApiResult factorial(@PathVariable int number ) {
       try {
          BigInteger factorial = _scientificCalculator.calculateFactorial(number);
-         return getResults(factorial);
+         return getResult(factorial);
       }
       catch ( ArithmeticException e ) {
          return getResultFromError(e.getMessage());
@@ -44,4 +44,5 @@ public class ScientificController {
    public ApiResult prime(@PathVariable long number ) {
       return getResult(_scientificCalculator.isPrime(number));
    }
+   
 }
