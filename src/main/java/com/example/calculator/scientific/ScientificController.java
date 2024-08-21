@@ -33,7 +33,7 @@ public class ScientificController {
    public ApiResult factorial(@PathVariable int number ) {
       try {
          BigInteger factorial = _scientificCalculator.calculateFactorial(number);
-         return getResult(factorial);
+         return getResults(factorial);
       }
       catch ( ArithmeticException e ) {
          return getResultFromError(e.getMessage());
