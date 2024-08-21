@@ -26,7 +26,7 @@ public class ScientificController {
 
    @GetMapping("/square/{factor}")
    public ApiResult square(@PathVariable BigDecimal factor ) {
-      return getResult(factor));
+      return getResult(factor.multiply(factor));
    }
 
    @GetMapping("/factorial/{number}")
