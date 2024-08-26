@@ -42,7 +42,7 @@ public class ScientificController {
 
    @GetMapping("/prime/{number}")
    public ApiResult prime(@PathVariable long number ) {
-      return getResult(_scientificCalculator.prime(number));
+      return getResult(_scientificCalculator.Prime(number));
    }
    
 }
