@@ -36,13 +36,13 @@ public class ScientificController {
          return getResult(factorial);
       }
       catch ( ArithmeticException e ) {
-         return getResultFromError(e.getMessage());
+          getResultFromError(e.getMessage());
       }
    }
 
    @GetMapping("/prime/{number}")
    public ApiResult prime(@PathVariable long number ) {
-      return getResult(_scientificCalculator.Prime(number));
+      return getResult(_scientificCalculator.isPrime(number));
    }
    
 }
